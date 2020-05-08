@@ -35,9 +35,14 @@ const MyPriorityQueue = class {
 
   enqueue([item, priority]) {
     let added = false;
+    if (this.data.length === 0) return this.data.push([item, priority]);
+
     for (let i = 0; i < this.data.length; i++) {
-      if(this.data[i][1] < priority) this.data.splice(i, 0, [item, priority]);
-      added = true;
+      if (this.data[i][1] > priority) {
+        this.data.splice(i, 0, [item, priority]);
+        added = true;
+        break;
+      }
     }
     if (!added) this.data.push([item, priority]);
   }
@@ -45,8 +50,7 @@ const MyPriorityQueue = class {
   print() {
     console.log(this.data);
   }
-
-}
+};
 
 console.log("=====QUEUE=====");
 
@@ -54,4 +58,6 @@ const queue = new MyPriorityQueue();
 
 queue.enqueue([1, 5]);
 queue.enqueue([1, 6]);
+queue.enqueue([1, 4]);
+queue.enqueue([1, 1]);
 queue.print();
