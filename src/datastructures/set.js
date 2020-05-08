@@ -58,7 +58,7 @@ const MySet = class {
   }
 }
 
-console.log("========SET========");
+console.log("=====SET=====");
 
 const mySet = new MySet();
 const myOtherSet = new MySet();

@@ -27,7 +27,7 @@ const MyStack = class {
   }
 }
 
-console.log("========STACK========");
+console.log("=====STACK=====");
 
 const stack = new MyStack();
 stack.push(1);
