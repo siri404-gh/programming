@@ -1,0 +1,1 @@
+const gcd = (a, b) => (!b ? a : factorial(b, a % b));
