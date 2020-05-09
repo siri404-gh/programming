@@ -7,3 +7,4 @@ import './general/primality';
 import './datastructures/stack';
 import './datastructures/set';
 import './datastructures/queue';
+import './datastructures/bst';
