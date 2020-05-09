@@ -60,8 +60,21 @@ const BST = class {
   }
 
   remove(data) {
-    
   }
+
+  findMinHeight() {}
+
+  findMaxHeight() {}
+
+  isBalanced() {}
+
+  inOrder() {}
+
+  preOrder() {}
+
+  postOrder() {}
+
+  levelOrder() {}
 
   print() {
     console.log(this.root);
