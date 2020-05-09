@@ -7,5 +7,4 @@ console.log(gcd(20, 8));
 Euclid's Algorithm
 Time complexity: O(n)
 Space complexity: O(1);
-
 */

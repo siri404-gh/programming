@@ -5,4 +5,5 @@ const isPrime = num => {
   return true;
 };
 
+log('isPrime');
 console.log(isPrime(13))

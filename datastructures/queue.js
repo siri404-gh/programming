@@ -52,7 +52,7 @@ const MyPriorityQueue = class {
   }
 };
 
-console.log("=====QUEUE=====");
+log('QUEUE');
 
 const queue = new MyPriorityQueue();
 
