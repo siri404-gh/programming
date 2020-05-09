@@ -1,4 +1,4 @@
-const log = msg => console.log(`%c ${msg}`, 'background: black; color: yellow');
+window.log = msg => console.log(`%c ${msg}`, 'background: black; color: yellow');
 
 // import './src/general/string';
 import './src/recursion/gcd';
