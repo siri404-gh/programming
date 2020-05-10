@@ -70,7 +70,7 @@ const BST = class {
           return node.left;
         } else {
           let tempNode = node.right;
-          while (!tempNode.left) {
+          while (tempNode.left) {
             tempNode = tempNode.left;
           }
           node.data = tempNode.data;
@@ -122,6 +122,6 @@ bst.add(7);
 bst.add(20);
 bst.remove(9);
 bst.print();
-console.log(bst.findMin());
-console.log(bst.findMax());
-console.log(bst.isPresent(2));
+// console.log(bst.findMin());
+// console.log(bst.findMax());
+// console.log(bst.isPresent(2));

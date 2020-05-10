@@ -8,3 +8,4 @@ import './datastructures/stack';
 import './datastructures/set';
 import './datastructures/queue';
 import './datastructures/bst';
+import './datastructures/binary-search-tree';
