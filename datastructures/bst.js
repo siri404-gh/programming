@@ -15,8 +15,7 @@ const BST = class {
     if (!this.root) {
       this.root = new Node(data);
       return;
-    }
-    else {
+    } else {
       const searchTree = pointer => {
         if(data < pointer.data) {
           if (!pointer.left) pointer.left = new Node(data);
@@ -26,7 +25,7 @@ const BST = class {
           else return searchTree(pointer.right);
         }
         return;
-      }
+      };
       return searchTree(this.root);
     }
   }
@@ -60,6 +59,33 @@ const BST = class {
   }
 
   remove(data) {
+    const removeNode = (node, data) => {
+      if (!node) return null;
+      if (data === node.data) {
+        if(!node.left && !node.right) {
+          return null;
+        } else if (!node.left) {
+          return node.right;
+        } else if (!node.right) {
+          return node.left;
+        } else {
+          let tempNode = node.right;
+          while (!tempNode.left) {
+            tempNode = tempNode.left;
+          }
+          node.data = tempNode.data;
+          node.right = removeNode(node.right, tempNode.data);
+          return node;
+        }
+      } else if (data < node.data) {
+        node.left = removeNode(node.left, data);
+        return node;
+      } else if (data > node.data) {
+        node.right = removeNode(node.right, data);
+        return node;
+      }
+    }
+    this.root = removeNode(this.root, data);
   }
 
   findMinHeight() {}
@@ -94,6 +120,7 @@ bst.add(22);
 bst.add(5);
 bst.add(7);
 bst.add(20);
+bst.remove(9);
 bst.print();
 console.log(bst.findMin());
 console.log(bst.findMax());
