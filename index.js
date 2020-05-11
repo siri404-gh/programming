@@ -4,6 +4,8 @@ import './general/string';
 import './recursion/gcd';
 import './recursion/factorial';
 import './general/primality';
+import './general/prototype';
+import './general/revolut';
 import './datastructures/stack';
 import './datastructures/set';
 import './datastructures/queue';
