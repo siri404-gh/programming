@@ -142,10 +142,28 @@ const BST = class {
     return result;
   }
 
+  longestSum() {
+  const sum = node => {
+    if (!node) return;
+    if (node.left) sum(node.left);
+    if (node.right) sum(node.right);
+    if (node.right && node.left) {
+      node.data += node.right.data > node.left.data ? node.right.data : node.left.data;
+    } else if (node.right) {
+      node.data += node.right.data; 
+    } else if (node.left) {
+      node.data += node.left.data;
+    }
+
+  };
+  sum(this.root);
+  return this.root.data;
+}
+
   print() {
-    console.log('inOrder', this.inOrder());
-    console.log('preOrder', this.preOrder());
-    console.log('postOrder', this.postOrder());
+    // console.log('inOrder', this.inOrder());
+    // console.log('preOrder', this.preOrder());
+    // console.log('postOrder', this.postOrder());
     console.log('levelOrder', this.levelOrder());
   }
 };
@@ -161,6 +179,8 @@ bst.add(5);
 bst.add(7);
 bst.add(20);
 bst.add(10);
+// bst.print();
+// console.log(bst.isPresent(9));
+// bst.remove(9);
 bst.print();
-console.log(bst.isPresent(9));
-bst.remove(9);
+console.log(bst.longestSum());

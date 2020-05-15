@@ -6,6 +6,8 @@ import './recursion/factorial';
 import './general/primality';
 import './general/prototype';
 import './general/revolut';
+import './general/array-flat';
+import './general/exclude-items';
 import './datastructures/stack';
 import './datastructures/set';
 import './datastructures/queue';
